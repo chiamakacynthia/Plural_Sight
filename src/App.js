@@ -1,14 +1,12 @@
-import React from 'react'
+import React from "react";
+import Homepage from "./Home/Homepage";
 
 const App = () => {
   return (
     <div>
-      hello world, trying to update
-
-
-
+      <Homepage />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
