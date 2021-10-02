@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import {IoIosArrowForward} from "react-icons/io"
+import {Link} from "react-router-dom"
 
-const SideBar = ({toggle}) => {
+const SideBar = ({toggle, appear}) => {
     return (
        <>
       {toggle?
@@ -11,7 +12,7 @@ const SideBar = ({toggle}) => {
       
        >
           <Holder>
-          <span>Platform <Icon1/></span>
+          <Link to="/plat"><span>Platform <Icon1/></span></Link>
            <hr/>
           </Holder>
           <Holder>

@@ -1,12 +1,23 @@
 import React from 'react'
 import styled from "styled-components"
 
-const Product = () => {
+
+
+
+
+const Product = ({show}) => {
+
     return (
-        <Container>
-            <Wrapper>
+<>
+      {show ? 
+      
+      <Container>
+      
+      <div>
+
+<Wrapper>
 <Up>
-   <Icon src="images/skill.png"/>
+<Icon src="images/skill.png"/>
 <Text1>Build tech skill to drive results</Text1>
 <Line/>
 <Text2>What is Skills?</Text2>
@@ -14,14 +25,20 @@ const Product = () => {
 </Up>
 <Line1/>
 <Up>
-   <Icon src="images/Flow.png"/>
+<Icon src="images/Flow.png"/>
 <Text1>Get insights into your workflow</Text1>
 <Line/>
 <Text2>What is Flow?</Text2>
 <Text2>View plans</Text2>
 </Up>
-            </Wrapper>
-        </Container>
+     </Wrapper>
+
+</div>
+  
+ </Container> : null
+    }  
+
+</>
     )
 }
 
@@ -33,13 +50,19 @@ height: 200px;
 display: flex;
 background-color:#212121;
 margin-left: 300px;
-color: white;
+align-items: center;
+position: absolute;
+z-index: 1;
+top: 10%;
+right: auto;
+left: 13%;
 `
 const Wrapper = styled.div`
 width: 90%;
 height: 85%;
 display: flex;
 padding: 20px;
+z-index: 1;
 `
 const Icon = styled.img`
 width: 100px;
@@ -63,6 +86,7 @@ height: 100%;
 display: flex;
 flex-direction: column;
 align-items: center;
+
 justify-content: space-around;
 `
 
@@ -70,6 +94,8 @@ const Text1 = styled.div`
 font-size:15px;
 font-weight:normal;
 color: white;
+text-align:center;
+
 `
 const Text2 = styled.div`
 font-size:15px;

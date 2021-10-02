@@ -109,31 +109,37 @@ const Icon = styled(FaFacebookSquare)`
 font-size: 20px;
 font-weight: bold;
 cursor: pointer;
+color: white;
 `
 const Icon1 = styled(FaYoutubeSquare)`
 font-size: 20px;
 font-weight: bold;
 cursor: pointer;
+color: white;
 `
 const Icon2 = styled(FaInstagram)`
 font-size: 20px;
 font-weight: bold;
 cursor: pointer;
+color: white;
 `
 const Icon5 = styled(FaGlobe)`
 font-size: 20px;
 font-weight: bold;
 cursor: pointer;
+color: white;
 `
 const Icon3 = styled(FaTwitter)`
 font-size: 20px;
 font-weight: bold;
 cursor: pointer;
+color: white;
 `
 const Icon4 = styled(FaLinkedin)`
 font-size: 20px;
 font-weight: bold;
 cursor: pointer;
+color: white;
 `
 
 const Container = styled.div`
@@ -142,7 +148,7 @@ const Container = styled.div`
   height: 50vh;
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-
+color: white;
 
   @media screen and (max-width: 886px){
   height: 500px;
@@ -182,6 +188,7 @@ const Section = styled.div`
   font-weight: normal;
   opacity: 0.5;
   margin-top: 7px;
+  color: white;
   &:hover {
     cursor: pointer;
     transition: all 350ms;
@@ -196,6 +203,7 @@ const FooterTab = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  color: white;
  /* padding-left: 100px; */
   border-top: 1px solid gray;
 
@@ -235,4 +243,5 @@ const SocialLink = styled.div`
   /* margin-left: 100px; */
   justify-content: space-between;
   align-items: center;
+
 `;

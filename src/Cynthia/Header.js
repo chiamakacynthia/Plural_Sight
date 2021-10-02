@@ -10,14 +10,28 @@ import Platform from './Platform'
 import Resource from "./Resources"
 import Product from "./Product"
 import SideBar from './DropMenu'
-import Dp from '../Dp'
+
+
 
 const Header = () => {
     const [show, setShow] =useState(false)
+    const [appear, setAppear] =useState(false)
+    const [show1, setShow1] = useState(false)
     const [toggle, setToggle] = useState(false)
 
     const onToggle = ()=>{
         setToggle(!toggle)
+    }
+
+    const OnShow = () => {
+        setShow(!show)
+    }
+
+    const onAppear = () => {
+        setAppear(!appear)
+    }
+    const onShow1 = () => {
+        setShow1(!show1)
     }
 
     return (
@@ -25,11 +39,20 @@ const Header = () => {
             <Wrapper>
                 <Left><Logo src = "images/PS_logo.png"/>
             <Dropdown>
-                <Span >Platform <Icon1 /></Span>
                 <Span >
-                    <Dp/>
-                    <Icon1 /></Span>
-                <Span >Resources <Icon1 /></Span>
+                    <Platform appear={appear}/>
+                    platform 
+                    <Icon1 onClick={onAppear}/>
+                </Span>
+                <Span >
+                    <Product show={show}/>
+                 product
+                   
+                    <Icon1 onClick={OnShow}/></Span>
+
+                <Span >
+                    <Resource show1={show1}/>
+                    Resources <Icon1 onClick={onShow1}/></Span>
                 <Span>For Individuals</Span>
             </Dropdown>
             </Left>
