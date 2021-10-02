@@ -6,6 +6,7 @@ import {AiOutlineCloud} from "react-icons/ai"
 import { HiOutlineDocumentText} from "react-icons/hi"
 import { IoIosHand} from "react-icons/io"
 import { GiTeamDowngrade} from "react-icons/gi"
+import {Link} from "react-router-dom"
 
 
 const Platform = ({appear}) => {
@@ -21,7 +22,7 @@ const Platform = ({appear}) => {
    <Icon/> <Span>Courses</Span>
 </First>
 <First>
-   <Icon1/> <Span> Skill assessments</Span>
+  <Link to="Assestment"> <Icon1/> <Span> Skill assessments</Span></Link>
 </First>
 <First>
    <Icon2/> <Span>Labs</Span>

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from "styled-components"
+import {Link} from "react-router-dom"
 
 const Platform = ({show1}) => {
     return (
@@ -10,7 +11,7 @@ const Platform = ({show1}) => {
 <One>
  <span>Ways To Upskill</span>
 <First>
-<Span>Blog</Span>
+<Link to="/Blog"><Span>Blog</Span></Link>
 </First>
 <First>
 <Span> Customer Stories</Span>

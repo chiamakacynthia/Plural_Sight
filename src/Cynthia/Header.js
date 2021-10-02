@@ -10,6 +10,7 @@ import Platform from './Platform'
 import Resource from "./Resources"
 import Product from "./Product"
 import SideBar from './DropMenu'
+import {Link} from "react-router-dom"
 
 
 
@@ -53,12 +54,12 @@ const Header = () => {
                 <Span >
                     <Resource show1={show1}/>
                     Resources <Icon1 onClick={onShow1}/></Span>
-                <Span>For Individuals</Span>
+                <Link to="/Individual"><Span>For Individuals</Span></Link>
             </Dropdown>
             </Left>
             <Right>
                <Icon/>
-                <Sign>Sign In <Icon1/></Sign>
+               <Link to="/signin"> <Sign>Sign In <Icon1/></Sign></Link>
                 <Button>Try For Free</Button>
                 
    {toggle ? (
@@ -135,6 +136,7 @@ font-weight:bold;
 // const Search = styled.div``
 const Sign = styled.div`
 cursor: pointer;
+color: white;
 @media screen and (max-width: 886px){
     display: none
 }
@@ -147,6 +149,7 @@ border: 1px solid white;
 display: flex;
 justify-content: center;
 align-items: center;
+
 
 &:hover{
     border: 2px solid white; 
@@ -167,6 +170,9 @@ display: flex;
 background-color:#212121;
 color: white;
 justify-content: center;
+/* position: fixed;
+z-index: 1; */
+
 `
 
 const Wrapper = styled.div`
@@ -203,4 +209,5 @@ font-weight:bold;
 margin-left: 10px;
 display: flex;
 cursor: pointer;
+color: white;
 `

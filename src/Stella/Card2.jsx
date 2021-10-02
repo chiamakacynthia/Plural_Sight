@@ -34,12 +34,13 @@ const CardHolder = styled.div`
   height: 100%;
   border-radius: 10px;
   color: white;
-  min-width: 350px;
+  /* min-width: 350px; */
   min-height: 400px;
 
   @media screen and (max-width: 768px) {
     height: 100%;
     min-height: 200px;
+  margin-top:10px;
   }
 `;
 

@@ -72,7 +72,15 @@ const Right = styled.div`
 const Center = styled.div`
   width: 800px;
   display: flex;
+  
   justify-content: space-around;
+
+  @media screen and (max-width: 769px){
+   
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
   /* background-color: aliceblue; */
 `;
 const Card = styled.div`
@@ -82,6 +90,13 @@ const Card = styled.div`
   padding: 20px;
   border-radius: 10px;
   margin-left: 10px;
+
+  @media screen and (max-width: 769px){
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+
 `;
 
 const Hold = styled.div`

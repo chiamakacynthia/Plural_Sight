@@ -1,28 +1,29 @@
 
 import React from 'react'
 import Header from './Cynthia/Header'
-import DropMenu from './Cynthia/DropMenu'
 import { BrowserRouter, Route, Switch, } from 'react-router-dom'
-import Platform from './Cynthia/Platform'
-import Resources from './Cynthia/Resources'
 import Homepage from './Stella/Homepage'
-
 import Footer from './Cynthia/Footer'
-
+import Individual from "./Stella/Individual/MainI"
 import 'antd/dist/antd.css'
-import Product from './Cynthia/Product'
+import Assestment from './Christo/Assestment.js'
+import SignIn from './Christo/SignIn.js'
+import Main from './Stella/Blog/Main'
+import Flow from "./Christo/Flow"
+
+
 const App = () => {
   return (
     <BrowserRouter>
    
     <Header/>
       <Switch>
-  
-        <Route exact path ="/plat" component={Platform}/>
         <Route exact path ="/" component={Homepage}/>
-        <Route exact path ="/resource" component={Resources}/>
-        <Route exact path ="/pro" component={Product}/>
-       
+        <Route exact path ="/assess" component={Assestment}/>
+        <Route exact path ="/flow" component={Flow}/>
+        <Route exact path ="/blog" component={Main}/>
+        <Route exact path ="/individual" component={Individual}/>
+        <Route exact path ="/SignIn" component={SignIn}/>      
       </Switch>
       <Footer/>
     </BrowserRouter>

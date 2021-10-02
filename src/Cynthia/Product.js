@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from "styled-components"
-
+import {Link} from "react-router-dom"
 
 
 
@@ -25,7 +25,7 @@ const Product = ({show}) => {
 </Up>
 <Line1/>
 <Up>
-<Icon src="images/Flow.png"/>
+<Link to="/Flow"><Icon src="images/Flow.png"/></Link>
 <Text1>Get insights into your workflow</Text1>
 <Line/>
 <Text2>What is Flow?</Text2>
@@ -56,6 +56,7 @@ z-index: 1;
 top: 10%;
 right: auto;
 left: 13%;
+color:white;
 `
 const Wrapper = styled.div`
 width: 90%;
