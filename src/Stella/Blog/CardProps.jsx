@@ -27,23 +27,24 @@ const Container = styled.div`
 
   /* @media screen and (max-width: 768px) {
     /* align-items: center; */
-  } */
+  
 `;
 const Blur = styled.div`
-  width: ${({ wd }) => (wd ? "500px" : "300px")};
+  width: ${({ wd }) => (wd ? "500px" : "350px")};
   height: 200px;
   /* background-color: red; */
   background: rgba(34, 34, 34, 0.3);
   -webkit-backdrop-filter: blur(4px);
   padding: 20px;
-  /* 
+  
   @media screen and (max-width: 768px) {
     width: 300px;
-    height: 100%;
-  } */
+    margin-top:20px;
+    /* height: 100%; */
+  } 
 `;
 const Wrapper = styled.img`
-  width: ${({ wd }) => (wd ? "500px" : "300px")};
+  width: ${({ wd }) => (wd ? "500px" : "350px")};
   height: 200px;
   padding: 20px;
   background-color: black;
@@ -57,7 +58,7 @@ const Article = styled.div`
 `;
 const Bold = styled.div`
   font-weight: bold;
-  font-size: 25px;
+  font-size: 20px;
   margin: 10px 0px;
   @media screen and (max-width: 768px) {
     font-size: 20px;

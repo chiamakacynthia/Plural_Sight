@@ -42,12 +42,12 @@ const Header = () => {
             <Dropdown>
                 <Span >
                     <Platform appear={appear}/>
-                    platform 
+                    Platform 
                     <Icon1 onClick={onAppear}/>
                 </Span>
                 <Span >
                     <Product show={show}/>
-                 product
+                 Product
                    
                     <Icon1 onClick={OnShow}/></Span>
 

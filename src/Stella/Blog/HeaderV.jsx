@@ -51,9 +51,10 @@ const Holder = styled.div`
   position: absolute;
   flex-direction: column;
   top: 70px;
-  @media screen and (min-width: 768px) {
+  z-index:1000;
+  /* @media screen and (min-width: 768px) {
     display: none;
-  }
+  } */
 `;
 
 const TextM = styled.div`

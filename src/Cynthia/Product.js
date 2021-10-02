@@ -56,7 +56,6 @@ z-index: 1;
 top: 10%;
 right: auto;
 left: 13%;
-color:white;
 `
 const Wrapper = styled.div`
 width: 90%;
