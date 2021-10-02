@@ -2,45 +2,46 @@ import React from 'react'
 import styled from 'styled-components'
 import {IoIosArrowForward} from "react-icons/io"
 
-const SideBar = ({toggle, setToggle}) => {
+const SideBar = ({toggle}) => {
     return (
-        <Container>
-            <Content 
-            onClick={()=>{
-            setToggle(false);
-            console.log(toggle);
-            }}
-            >
-               <Holder>
-               <span>Platform <Icon1/></span>
-                <hr/>
-               </Holder>
-               <Holder>
-               <span>Products <Icon1/></span>
-                <hr/>
-               </Holder>
-               <Holder>
-               <span>Resources <Icon1/></span>
-                <hr/>
-               </Holder>
-               <Holder>
-               <span> For Individuals</span>
-                <hr/>
-               </Holder>
-              
-               <Holder>
-               <span> Sign In <Icon1/></span>
-                <hr/>
-               </Holder>
-              
-               <Holder>
-               <Button>Try For Free</Button>
-                <hr/>
-               </Holder>
-              
-            </Content>
-           
-        </Container>
+       <>
+      {toggle?
+       <Container>
+       <Content 
+      
+       >
+          <Holder>
+          <span>Platform <Icon1/></span>
+           <hr/>
+          </Holder>
+          <Holder>
+          <span>Products <Icon1/></span>
+           <hr/>
+          </Holder>
+          <Holder>
+          <span>Resources <Icon1/></span>
+           <hr/>
+          </Holder>
+          <Holder>
+          <span> For Individuals</span>
+           <hr/>
+          </Holder>
+         
+          <Holder>
+          <span> Sign In <Icon1/></span>
+           <hr/>
+          </Holder>
+         
+          <Holder>
+          <Button>Try For Free</Button>
+           <hr/>
+          </Holder>
+         
+       </Content>
+      
+   </Container> : null
+    }
+       </>
     )
 }
 
@@ -48,17 +49,22 @@ export default SideBar
 
 
 const Container = styled.div`
-width: 100%;
-height: 80vh;
+width: 100vw;
+height: 500px;
 background-color:#000000;
+z-index:1;
+position : fixed;
+margin-left: -240px;
+margin-top : 600px;
 
 @media screen and (min-width: 886px){
     display: none
+
 }
 `
 
 const Button = styled.div`
-width: 600px;
+width: 200px;
 height: 60px;
 background-color:transparent;
 border: 1px solid white;
@@ -79,14 +85,14 @@ margin-bottom: 20px;
 const Content = styled.div`
 padding-top: 30px;
 height: 80%;
-width: 100%;
+/* width: 100%; */
 display: flex;
 justify-content: center;
 flex-direction: column;
 `
 const Holder = styled.div`
 height: 100%;
-width: 100%;
+/* width: 100%; */
 display: flex;
 justify-content: center;
 flex-direction: column;

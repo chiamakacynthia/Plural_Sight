@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import GlobalButton from "./GlobalButton";
-// import img from "images/bg.png";
+// import img from "../images/bg.PNG";
 import Fade from "react-reveal/Fade";
 
 const HomeTop = () => {
@@ -21,7 +21,7 @@ const HomeTop = () => {
 
   return (
     <Container>
-      <Image src="images/bg.png" />
+      <Image src="images/bg.PNG" />
       <Wrapper>
         <BoldText>
           <Bold1>Build better</Bold1>
@@ -80,7 +80,7 @@ const Wrapper = styled.div`
 
   padding: 10px;
   @media screen and (max-width: 768px) {
-    right: 70px;
+    right: 60px;
     width: 280px;
     /* background-color: red; */
     padding-left: 20px;

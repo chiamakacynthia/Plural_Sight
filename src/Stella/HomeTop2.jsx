@@ -8,10 +8,10 @@ const HomeTop2 = () => {
   return (
     <Container>
       <HoldCards>
-        <CardHolder img= "images/js.png" course="Python" no="14" />
-        <CardHolder img="images/js.png" course="Python" no="14" />
-        <CardHolder img="images/js.png" course="Python" no="14" />
-        <CardHolder img="images/js.png" course="Python" no="14" />
+        <CardHolder src="images/js.png" course="Python" no="14" />
+        <CardHolder src="images/js.png" course="Python" no="14" />
+        <CardHolder src="images/js.png" course="Python" no="14" />
+        <CardHolder src="images/js.png" course="Python" no="14" />
       </HoldCards>
       <Wrapper>
         <Text1>TRENDING TECHNOLOGIES</Text1>
@@ -45,9 +45,9 @@ const Container = styled.div`
   align-items: center;
   color: white;
 
-  @media screen and (max-width: 768px) {
+  /* @media screen and (max-width: 768px) {
     flex-direction: column-reverse;
-  }
+  } */
 `;
 const Wrapper = styled.div`
   /* background-color: blue; */

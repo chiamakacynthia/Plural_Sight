@@ -6,9 +6,14 @@ import {CgMenuRightAlt} from "react-icons/cg"
 import {GiCancel} from "react-icons/gi"
 import Fade from 'react-reveal/Fade';
 import DropMenu from "./DropMenu"
+import Platform from './Platform'
+import Resource from "./Resources"
+import Product from "./Product"
+import SideBar from './DropMenu'
+import Dp from '../Dp'
 
 const Header = () => {
-
+    const [show, setShow] =useState(false)
     const [toggle, setToggle] = useState(false)
 
     const onToggle = ()=>{
@@ -20,9 +25,11 @@ const Header = () => {
             <Wrapper>
                 <Left><Logo src = "images/PS_logo.png"/>
             <Dropdown>
-                <Span>Platform <Icon1/></Span>
-                <Span>Products <Icon1/></Span>
-                <Span>Resources <Icon1/></Span>
+                <Span >Platform <Icon1 /></Span>
+                <Span >
+                    <Dp/>
+                    <Icon1 /></Span>
+                <Span >Resources <Icon1 /></Span>
                 <Span>For Individuals</Span>
             </Dropdown>
             </Left>
@@ -30,15 +37,21 @@ const Header = () => {
                <Icon/>
                 <Sign>Sign In <Icon1/></Sign>
                 <Button>Try For Free</Button>
-                <Menu>
+                
    {toggle ? (
-         <GiCancel onClick={onToggle}/>
+   <Cancel  onClick={onToggle}/>
+        
        ) :(
-        <CgMenuRightAlt onClick={onToggle}/>
-       )}
-</Menu>
-<Fade left when={toggle}>
-          {/* <DropMenu /> */}
+        <Menu  onClick={onToggle}/> 
+       )} 
+    <SideBar toggle = {toggle}/>
+
+{/* <div>
+    {toggle ? <div> <DropMenu  /></div> : null}
+</div>  */}
+ <Fade left when={toggle}>
+    
+         
         </Fade>
             </Right>
           
@@ -50,7 +63,7 @@ const Header = () => {
 export default Header
 
 const Menu = styled(CgMenuRightAlt)`
-font-size:40px;
+font-size:30px;
 font-weight:bold;
 
 @media screen and (min-width: 886px){
@@ -59,6 +72,10 @@ font-weight:bold;
 @media screen and (max-width: 886px){
     display: block;
 }
+`
+const Cancel= styled(GiCancel)`
+font-size: 30px;
+font-weight: bold;
 `
 
 const Icon1 = styled(IoMdArrowDropdown)`
@@ -94,6 +111,7 @@ font-weight:bold;
 `
 // const Search = styled.div``
 const Sign = styled.div`
+cursor: pointer;
 @media screen and (max-width: 886px){
     display: none
 }
@@ -142,6 +160,7 @@ width: 200px;
 height: 50px;
 margin-left:20px;
 object-fit: contain;
+cursor: pointer;
 `
 const Dropdown = styled.div`
 width: 66%;
@@ -156,8 +175,9 @@ align-items: center;
 }
 `
 const Span = styled.div`
-font-size:20px;
+font-size:15px;
 font-weight:bold;
 margin-left: 10px;
 display: flex;
+cursor: pointer;
 `

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { AiOutlineRight } from "react-icons/ai";
+// import img from "../images/logo-skills.png";
 
 const CardHolder = ({ img, course, no }) => {
   return (
@@ -18,7 +19,7 @@ const CardHolder = ({ img, course, no }) => {
           </div>
         </Take>
       </Holder>
-      <Image src={img} />
+      <Image src="images/logo-skills.png" />
     </Card>
   );
 };
